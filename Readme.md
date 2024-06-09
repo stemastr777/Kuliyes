@@ -7,13 +7,17 @@
 4. Jangan lupa push kalau sudah selesai
 
 ### Struktur direktori projek:
-asset/fonts  => untuk menambah font yang di download
-asset/images => menyimpan gambar
-asset/icon   => menyimpan icon
+*asset/fonts*  => untuk menambah font yang di download
 
-pages   => menyimpan file HTML
-scripts => menyimpan file JS
-styles  => menyimpan file CSS
+*asset/images* => menyimpan gambar
+
+*asset/icon*   => menyimpan icon
+
+*pages*   => menyimpan file HTML
+
+*scripts* => menyimpan file JS
+
+*styles*  => menyimpan file CSS
 
 
 *NOTE:* Setiap file HTML harus memiliki `<link rel="stylesheet" href="../styles/global-output.css">` untuk mendapat akses styling global.

@@ -3,8 +3,10 @@
 
 1. pull code dari repo ini
 2. run `npm install` pada root folder project
-3. developing code sudah bisa dilakukan
-4. Jangan lupa push kalau sudah selesai
+3. run `npm run dev` pada root folder project
+4. developing code sudah bisa dilakukan
+
+
 
 ### Struktur direktori projek:
 *asset/fonts*  => untuk menambah font yang di download

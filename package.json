@@ -1,0 +1,22 @@
+{
+  "name": "kuliyes",
+  "version": "1.0.0",
+  "description": "Kulino in steroid",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./styles/global.css -o ./styles/global-output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stemastr777/Kuliyes.git"
+  },
+  "author": "Steven, Suryo, Amri, Sherina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stemastr777/Kuliyes/issues"
+  },
+  "homepage": "https://github.com/stemastr777/Kuliyes#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

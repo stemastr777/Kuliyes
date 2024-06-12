@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    
 </head>
 <body>
-  <header class="flex flex-row space-x-2 p-4 w-screen h-28 bg-main text-white ">
+  <header class="flex flex-row space-x-2 p-4 w-full h-28 bg-main text-white ">
     <div class="basis-1/12 ">
         <div class="bg-[url('../asset/images/mike.jpeg')] bg-contain w-20 h-20 m-auto rounded-full"></div>
     </div>
@@ -19,7 +19,7 @@
     </div>
   </header>
   <main class="font-quicksand">
-    <div class="bg-main justify-center mx-auto my-32 rounded-xl w-5/12 text-xl text-white">
+    <div class="bg-main justify-center m-auto rounded-xl w-5/12 text-xl text-white absolute inset-0 h-fit">
       <div class="p-10">
         <form>
           <h2 class="text-4xl font-bold">Portal Login</h2><br><hr class="border-2"><br>
@@ -32,13 +32,13 @@
             <button type="button" onclick="showPassword()" class="py-3 hover:text-blue-200">Tampilkan Password</button><br>
             <a href="#" class="py-3 hover:text-blue-200">Lupa Password</a>
           </div><br>
-          <button type="button" onclick="validateLogin()" class="bg-white text-black rounded-md p-1.5 w-16">Login</button>
+          <button type="button" onclick="validateLogin()" class="bg-white text-black rounded-md p-1.5 w-fit">Login</button>
         </form>
       </div>
     </div>
   </main>
-  <footer class="flex items-center justify-center w-screen h-24 bg-main text-white">
-    <p class="">UNIVERSITAS MAKLO GAMING || Copyright © 2015 - 2024 PSI MLG All right Reserved</p>
+  <footer class="flex items-center justify-center w-full h-24 bg-main text-white absolute bottom-0">
+    <div>UNIVERSITAS MAKLO GAMING || Copyright © 2015 - 2024 PSI MLG All right Reserved</div>
   </footer>
   <script>
     function showPassword() {

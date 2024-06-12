@@ -608,6 +608,11 @@ video {
   margin-bottom: auto;
 }
 
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }

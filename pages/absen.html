@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global-output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <header class="flex flex-row space-x-2 p-4 w-screen h-28 bg-main text-white ">
+        <div class="basis-1/12 ">
+            <div class="bg-[url('../asset/images/mike.jpeg')] bg-contain w-20 h-20 m-auto rounded-full"></div>
+        </div>
+        <div class="basis-8/12 ">
+            <p class="text-2xl">Kuliyes | Website kuliah online</p>
+            <p class="text-base mb-1">Universitas Maklo Gaming</p>
+            <p class="text-sm">Narahubung: +62 244-533-3532 ( Admin Kuliyes)</p>
+        </div>
+        <div class=" flex flex-row basis-3/12 space-x-2">
+            <div class=" basis-3/4 text-right my-auto">
+                <p class="mb-1">NAMA MAHASISWA</p>
+                <p>A11.XXXX.XXXXX</p>
+            </div>
+            <div class="flex items-center justify-center  basis-1/4">
+                <span class="material-symbols-outlined text-6xl text-secondary">
+                    account_circle
+                </span>
+            </div>
+        </div>
+    </header>
+        <!-- back dan absensi start -->
+        <section id="back" class="pt-36 ">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="w-full self-center px-4 lg:px-12 flex justify-between">
+                        <a href="#" class="bg-yellow-500 px-8 py-2 rounded-full text-xl font-semibold text-white hover:text-yellow-400 hover:bg-yellow-100 transition duration-500 ease-in-out">Kembali</a>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- back dan absensi end -->
+             <!-- Absen Form Start -->
+     <section id="absen" class="pt-12 pb-20">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="self-start px-4 rounded-md lg:w-1/2 lg:px-12">
+                    <div class="bg-slate-400 rounded-lg mb-5">
+                        <form class=" mx-auto p-4 lg:p-8">
+                            <div class="mb-5">
+                            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama :</label>
+                            <input type="nama" id="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nama" required />
+                            </div>
+                            <div class="mb-5">
+                            <label for="NIM" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NIM :</label>
+                            <input type="NIM" id="NIM" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="NIM" required />
+                            </div>
+                            <div class="mb-5">
+                            <label for="matkul" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mata Kuliah :</label>
+                            <input type="matkul" id="matkul" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mata Kuliah" required />
+                            </div>
+                            <div class="mb-5">
+                                <label for="kelompok" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kelompok :</label>
+                                <input type="kelompok" id="kelompok" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Kelompok" />
+                              </div>
+                            <div class="mb-5">
+                                <label for="absen" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status :</label>
+                                <select id="absen" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                  <option>Hadir</option>
+                                  <option>Izin</option>
+                                  <option>Sakit</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm min-w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition duration-500 ease-in-out">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="self-end px-4 lg:w-1/2 lg:px-12">
+                    <div class="w-full self-start px-4 lg:px-12 rounded-md ">
+                        <div class="bg-slate-400 rounded-md flex justify-center items-center flex-col">
+                            <h1 class="text-2xl text-white font-semibold my-4 text-center">Pie Chart</h1>
+                            <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 mb-8">
+                                <div class="flex justify-between items-start w-full">
+                                    <div class="flex-col items-center">
+                                    <div class="flex items-center mb-1">
+                                        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white me-1">Attendace Traffic</h5>
+                                        <svg data-popover-target="chart-info" data-popover-placement="bottom" class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm0 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm1-5.034V12a1 1 0 0 1-2 0v-1.418a1 1 0 0 1 1.038-.999 1.436 1.436 0 0 0 1.488-1.441 1.501 1.501 0 1 0-3-.116.986.986 0 0 1-1.037.961 1 1 0 0 1-.96-1.037A3.5 3.5 0 1 1 11 11.466Z"/>
+                                        </svg>
+                                        <div data-popover id="chart-info" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                                            <div class="p-3 space-y-2">
+                                                <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                                                <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                                                <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                                <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                                                <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                            </svg></a>
+                                        </div>
+                                        <div data-popper-arrow></div>
+                                    </div>
+                                    </div>
+                                    <button id="dateRangeButton" data-dropdown-toggle="dateRangeDropdown" data-dropdown-ignore-click-outside-class="datepicker" type="button" class="inline-flex items-center text-blue-700 dark:text-blue-600 font-medium hover:underline">31 Nov - 31 Dev <svg class="w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                    </button>
+                                    <div id="dateRangeDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600">
+                                        <div class="p-3" aria-labelledby="dateRangeButton">
+                                        <div date-rangepicker datepicker-autohide class="flex items-center">
+                                            <div class="relative">
+                                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                                    </svg>
+                                                </div>
+                                                <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start date">
+                                            </div>
+                                            <span class="mx-2 text-gray-500 dark:text-gray-400">to</span>
+                                            <div class="relative">
+                                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                                    </svg>
+                                                </div>
+                                                <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="End date">
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center">
+                                    <button id="widgetDropdownButton" data-dropdown-toggle="widgetDropdown" data-dropdown-placement="bottom" type="button"  class="inline-flex items-center justify-center text-gray-500 w-8 h-8 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm"><svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                                    </svg><span class="sr-only">Open dropdown</span>
+                                    </button>
+                                    <div id="widgetDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="widgetDropdownButton">
+                                        <li>
+                                            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                                            </svg>Edit widget
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+                                                <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+                                            </svg>Download data
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5.953 7.467 6.094-2.612m.096 8.114L5.857 9.676m.305-1.192a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0ZM17 3.84a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0Zm0 10.322a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0Z"/>
+                                            </svg>Add to repository
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                <path d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z"/>
+                                            </svg>Delete widget
+                                            </a>
+                                        </li>
+                                        </ul>
+                                </div>
+                                </div>
+                                </div>
+                            
+                                <!-- Line Chart -->
+                                <div class="py-6" id="pie-chart"></div>
+                            
+                                <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+                                <div class="flex justify-between items-center pt-5">
+                                    <!-- Button -->
+                                    <button
+                                    id="dropdownDefaultButton"
+                                    data-dropdown-toggle="lastDaysdropdown"
+                                    data-dropdown-placement="bottom"
+                                    class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+                                    type="button">
+                                    Last 7 days
+                                    <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                    </button>
+                                    <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 7 days</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 days</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 days</a>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                    <a
+                                    href="#"
+                                    class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+                                    Traffic analysis
+                                    <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                    </svg>
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Absen Form End -->
+          <!-- Callendar Start -->
+     <section id="pie" class="pt-12 pb-20">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:px-12">
+                    <div class="bg-gray-100 flex items-center justify-center">
+                        <div class=" mx-auto p-4 w-full">
+                            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                                <div class="flex items-center justify-between px-6 py-3 bg-gray-700">
+                                    <button id="prevMonth" class="text-white">Previous</button>
+                                    <h2 id="currentMonth" class="text-white"></h2>
+                                    <button id="nextMonth" class="text-white">Next</button>
+                                </div>
+                                <div class="grid grid-cols-7 gap-2 p-4" id="calendar">
+                                    <!-- Calendar Days Go Here -->
+                                </div>
+                                <div id="myModal" class="modal hidden fixed inset-0 flex items-center justify-center z-50">
+                                  <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+                                
+                                  <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                                    <div class="modal-content py-4 text-left px-6">
+                                      <div class="flex justify-between items-center pb-3">
+                                        <p class="text-2xl font-bold">Selected Date</p>
+                                        <button id="closeModal" class="modal-close px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring">✕</button>
+                                      </div>
+                                      <div id="modalDate" class="text-xl font-semibold"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Callendar End -->
+   <!-- Footer Start -->
+   <footer class="flex items-center justify-center w-screen h-24 bg-main text-white">
+        <p class="text-center text-wrap px-3">UNIVERSITAS MAKLO GAMING || Copyright © 2015 - 2024 PSI MLG All right Reserved</p>
+   </footer>
+    <script>
+        
+        const getChartOptions = () => {
+          return {
+            series: [52.8, 26.8, 20.4],
+            colors: ["#1C64F2", "#16BDCA", "#9061F9"],
+            chart: {
+              height: 420,
+              width: "100%",
+              type: "pie",
+            },
+            stroke: {
+              colors: ["white"],
+              lineCap: "",
+            },
+            plotOptions: {
+              pie: {
+                labels: {
+                  show: true,
+                },
+                size: "100%",
+                dataLabels: {
+                  offset: -25
+                }
+              },
+            },
+            labels: ["Hadir", "Izin", "Sakit"],
+            dataLabels: {
+              enabled: true,
+              style: {
+                fontFamily: "Inter, sans-serif",
+              },
+            },
+            legend: {
+              position: "bottom",
+              fontFamily: "Inter, sans-serif",
+            },
+            yaxis: {
+              labels: {
+                formatter: function (value) {
+                  return value + "%"
+                },
+              },
+            },
+            xaxis: {
+              labels: {
+                formatter: function (value) {
+                  return value  + "%"
+                },
+              },
+              axisTicks: {
+                show: false,
+              },
+              axisBorder: {
+                show: false,
+              },
+            },
+          }
+        }
+        
+        if (document.getElementById("pie-chart") && typeof ApexCharts !== 'undefined') {
+          const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
+          chart.render();
+        }
+        
+        
+        // Calendar
+        // Function to generate the calendar for a specific month and year
+        function generateCalendar(year, month) {
+            const calendarElement = document.getElementById('calendar');
+            const currentMonthElement = document.getElementById('currentMonth');
+            
+            // Create a date object for the first day of the specified month
+            const firstDayOfMonth = new Date(year, month, 1);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // Clear the calendar
+            calendarElement.innerHTML = '';
+        
+            // Set the current month text
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            currentMonthElement.innerText = `${monthNames[month]} ${year}`;
+            
+            // Calculate the day of the week for the first day of the month (0 - Sunday, 1 - Monday, ..., 6 - Saturday)
+            const firstDayOfWeek = firstDayOfMonth.getDay();
+        
+            // Create headers for the days of the week
+            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            daysOfWeek.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'text-center font-semibold';
+                dayElement.innerText = day;
+                calendarElement.appendChild(dayElement);
+            });
+        
+            // Create empty boxes for days before the first day of the month
+            for (let i = 0; i < firstDayOfWeek; i++) {
+                const emptyDayElement = document.createElement('div');
+                calendarElement.appendChild(emptyDayElement);
+            }
+        
+            // Create boxes for each day of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'text-center py-2 border cursor-pointer';
+                dayElement.innerText = day;
+        
+                // Assign a unique ID to each day element
+                dayElement.id = `day-${year}-${month}-${day}`;
+        
+                // Check if this date is the current date
+                const currentDate = new Date();
+                if (year === currentDate.getFullYear() && month === currentDate.getMonth() && day === currentDate.getDate()) {
+                    dayElement.classList.add('bg-blue-500', 'text-white'); // Add classes for the indicator
+                }
+        
+                calendarElement.appendChild(dayElement);
+            }
+        
+            // Add event listeners for date click events
+            addDateClickEvents();
+        }
+        
+        // Function to add click event listeners to each day element
+        function addDateClickEvents() {
+            const dayElements = document.querySelectorAll('.cursor-pointer');
+            dayElements.forEach(dayElement => {
+                dayElement.addEventListener('click', () => {
+                    const selectedDay = document.querySelector('.bg-blue-300');
+                    if (selectedDay) {
+                        selectedDay.classList.remove('bg-blue-300');
+                    }
+                    dayElement.classList.add('bg-blue-300');
+        
+                    const day = parseInt(dayElement.innerText);
+                    const selectedDate = new Date(currentYear, currentMonth, day);
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const formattedDate = selectedDate.toLocaleDateString(undefined, options);
+                    showModal(formattedDate);
+                });
+            });
+        }
+        
+        // Initialize the calendar with the current month and year
+        const currentDate = new Date();
+        let currentYear = currentDate.getFullYear();
+        let currentMonth = currentDate.getMonth();
+        generateCalendar(currentYear, currentMonth);
+        
+        // Event listeners for previous and next month buttons
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            generateCalendar(currentYear, currentMonth);
+        });
+        
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            generateCalendar(currentYear, currentMonth);
+        });
+        
+        // Function to show the modal with the selected date
+        function showModal(selectedDate) {
+            const modal = document.getElementById('myModal');
+            const modalDateElement = document.getElementById('modalDate');
+            modalDateElement.innerText = selectedDate;
+            modal.classList.remove('hidden');
+        }
+        
+        // Function to hide the modal
+        function hideModal() {
+            const modal = document.getElementById('myModal');
+            modal.classList.add('hidden');
+        }
+        
+        // Event listener for closing the modal
+        document.getElementById('closeModal').addEventListener('click', () => {
+            hideModal();
+        });
+        
+             </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

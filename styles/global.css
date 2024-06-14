@@ -14,7 +14,8 @@
 }
 
 body {
-    font-family: 'proxima';
+    font-family: 'quicksand';
+    font-weight: 500
 }
 
 @tailwind base;

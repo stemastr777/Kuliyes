@@ -13,13 +13,14 @@ module.exports = {
         extend: {
             colors: {
                 main: '#05096C',
+                "main-dark": '#040759', 
                 secondary: '#FFC700',
                 positive: '#009A22',
                 alert: '#FF0000'
             }
         },
         fontFamily: {
-            'proxima': ["proxima", "Quicksand", "sans-serif"]
+            'quicksand': ["Quicksand", "proxima", "sans-serif"]
         }
     }
 }

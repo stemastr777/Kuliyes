@@ -2,7 +2,9 @@
 module.exports = {
     mode: 'jit',
     purge: [
-      './pages/*.html'
+        './pages/*.html',
+        './styles/*.css',
+        './scripts/*.js'
     ],
     content: [
         './pages/*.html',

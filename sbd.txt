@@ -1,8 +1,0 @@
-
-
-
-
-
-
-
-create procedure add_gaji_pegawai(p_no_peg char(5), p_nama_peg varchar(20), p_gol enum('1', '2', '3', '4', '5'), p_jml_anak int, p_thn_masuk date, p_status_marital enum('M', 'B')) begin declare masa_kerja int; set masa_kerja = YEAR(NOW())-YEAR(p_thn_masuk); declare gaji_pokok int; set gaji_pokok = if(p_gol='1' AND masa_kerja<5, 5000000, if(p_gol='2' AND masa_kerja>=5 AND masa_kerja<=10, 7500000, if(p_gol='3' AND masa_kerja>10, 10000000, 0))); declare tunj_keluarga int; set tunj_keluarga = if(status_marital='M', 0.075*gaji_pokok, 0); declare gaji_kotor dec(10,2); gaji_kotor = gaji_pokok + tunj_keluarga; declare pajak dec(10,2); set pajak = if(gaji_kotor<10000000, 0.025*gaji_kotor, 0.05*gaji_kotor); declare gaji_bersih dec(10,2);gaji_bersih = gaji_kotor - pajak; insert into gaji_pegawai values(p_no_peg, p_nama_peg, p_gol, p_jml_anak, p_thn_masuk, p_status_marital, masa_kerja, gaji_pokok, tunj_keluarga, gaji_kotor, Pajak, gaji_bersih); end //

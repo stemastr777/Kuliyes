@@ -674,6 +674,10 @@ video {
   inset-inline-start: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1052,6 +1056,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .min-w-full {

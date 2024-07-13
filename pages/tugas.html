@@ -29,10 +29,21 @@
                 <p>A11.XXXX.XXXXX</p>
                 <a href="./login.html" class=" font-bold hover:text-blue-100">log out</a>
             </div>
-            <div class="flex items-center justify-center  basis-1/4">
-                <span class="material-symbols-outlined text-6xl text-secondary">
-                    account_circle
-                </span>
+            <div class="flex items-center justify-center basis-1/4">
+                <div class="relative inline-block">
+                    <button id="dropdownBtn" class="focus:outline-none">
+                        <span class="material-symbols-outlined text-6xl text-secondary">
+                            account_circle
+                        </span>
+                    </button>
+                    <div id="dropdownContent"
+                        class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-10 border-main border-2 hidden">
+                        <a href="#settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                        <a href="#my-profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                        <a href="#help" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help</a>
+                        <a href="#feedback" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Feedback</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -118,5 +129,39 @@
 <footer class="flex items-center justify-center w-screen h-24 bg-main text-white relative ">
     <p class="">UNIVERSITAS MAKLO GAMING || Copyright © 2015 - 2024 PSI MLG All right Reserved</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const dropdownContent = document.getElementById('dropdownContent');
+
+        dropdownBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.add('hidden');
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const dropdownContent = document.getElementById('dropdownContent');
+
+        dropdownBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.add('hidden');
+            }
+        });
+    });
+</script>
 </body>
 </html>
